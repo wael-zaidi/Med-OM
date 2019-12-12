@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/img/login">
+        <file>img/login/login.jpg</file>
+        <file>img/login/background.jpg</file>
+        <file>img/login/button_init.png</file>
+        <file>img/login/button_clicked.png</file>
+        <file>img/login/logologin.png</file>
+        <file>img/Background_color.png</file>
+        <file>img/dashboard/dashboard.jpg</file>
+        <file>img/Gestion login/icon_add.png</file>
+        <file>img/Gestion login/icon_edit.png</file>
+        <file>img/Gestion login/icon_login.png</file>
+        <file>img/login/checked.png</file>
+        <file>img/Gestion login/rubbish.png</file>
+        <file>img/login/eye.png</file>
+        <file>img/Gestion login/refresh.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>img/login/background.jpg</file>
+        <file>img/dashboard/dashboard.jpg</file>
+        <file>dashboard.cpp</file>
+        <file>dashboard.h</file>
+        <file>dialog.cpp</file>
+        <file>dialog.h</file>
+        <file>login.cpp</file>
+        <file>login.h</file>
+        <file>main.cpp</file>
+        <file>mainwindow.cpp</file>
+        <file>mainwindow.h</file>
+        <file>img/dashboard/btn_gestion_patient1.png</file>
+        <file>img/dashboard/btn_gestion_patient2.png</file>
+        <file>img/dashboard/icon_gestion_patient.png</file>
+        <file>img/Gestion login/icon_login.png</file>
+        <file>connection_med_om.cpp</file>
+        <file>connection_med_om.h</file>
+    </qresource>
+</RCC>
