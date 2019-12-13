@@ -1,5 +1,6 @@
 #include "login_historique.h"
 #include "ui_login_historique.h"
+#include"login_ajouter.h"
 #include <QMessageBox>
 #include<QString>
 #include <QSqlDatabase>
@@ -8,15 +9,18 @@
 #include<QtPrintSupport/QPrinter>
 #include<QtPrintSupport/QPrintDialog>
 #include <QtPrintSupport>
+#include<QTime>
+#include<QDate>
 #include "connection_med_om.h"
-
+#include"dashboard.h"
+#include"login.h"
 
 login_historique::login_historique(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::login_historique)
 {
     ui->setupUi(this);
-
+    ui->group_text_id_3->setHidden(1);
     afficher_tab();
 }
 

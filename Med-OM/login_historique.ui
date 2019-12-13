@@ -181,6 +181,9 @@ font: 20pt &quot;Bahnschrift&quot;;
     <string>Heure</string>
    </property>
    <widget class="QLineEdit" name="text_id_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>

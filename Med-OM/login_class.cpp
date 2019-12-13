@@ -4,7 +4,12 @@
 
 login_class::login_class()
 {
-
+    id="";
+    password="";
+    autorisation="";
+    etat="";
 }
+
+
 
 

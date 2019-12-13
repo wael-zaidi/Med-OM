@@ -57,6 +57,15 @@
      <height>61</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift</family>
+     <pointsize>24</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/img/dashboard/btn_gestion_patient1.png)3 10 15 10;
 font: 24pt &quot;Bahnschrift&quot;;
@@ -90,6 +99,15 @@ font: 24pt &quot;Bahnschrift&quot;;
      <width>331</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift</family>
+     <pointsize>24</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/img/dashboard/btn_gestion_patient1.png)3 10 15 10;
@@ -138,6 +156,49 @@ font: 24pt &quot;Bahnschrift&quot;;
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="icon_gestion_login_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>340</y>
+     <width>81</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/img/login/img/dashboard/menu.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_gestion_login_2">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>350</y>
+     <width>331</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift</family>
+     <pointsize>24</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/img/dashboard/btn_gestion_patient1.png)3 10 15 10;
+font: 24pt &quot;Bahnschrift&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>Rendez-vous</string>
+   </property>
+  </widget>
   <zorder>background_image</zorder>
   <zorder>btn_gestion_patient</zorder>
   <zorder>icon_gestion_patient</zorder>
@@ -145,6 +206,8 @@ font: 24pt &quot;Bahnschrift&quot;;
   <zorder>icon_gestion_login</zorder>
   <zorder>label</zorder>
   <zorder>login_active</zorder>
+  <zorder>btn_gestion_login_2</zorder>
+  <zorder>icon_gestion_login_2</zorder>
  </widget>
  <resources/>
  <connections/>

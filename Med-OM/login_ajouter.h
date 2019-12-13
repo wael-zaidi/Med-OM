@@ -17,6 +17,7 @@ class login_ajouter : public QDialog
 
 public:
      QString id,password,autorisation,etat;
+
     explicit login_ajouter(QWidget *parent = nullptr);
     ~login_ajouter();
 

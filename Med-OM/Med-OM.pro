@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui printsupport serialport
+QT       += widgets multimedia
 QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -24,6 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 CONFIG += c++11
+CONFIG += resources_big
 
 SOURCES += \
         main.cpp \
@@ -38,7 +40,16 @@ SOURCES += \
     login_modifier.cpp \
     login_historique.cpp \
     login_class.cpp \
-    arduino.cpp
+    arduino.cpp \
+    login_historique_class.cpp \
+    rdv.cpp \
+    rendez_vous.cpp \
+    mainwin.cpp \
+    ordonnance.cpp \
+    chambre.cpp \
+    patient.cpp \
+    dialog.cpp \
+    gestion_patient.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -52,7 +63,16 @@ HEADERS += \
     login_modifier.h \
     login_historique.h \
     login_class.h \
-    arduino.h
+    arduino.h \
+    login_historique_class.h \
+    rdv.h \
+    rendez_vous.h \
+    mainwin.h \
+    ordonnance.h \
+    chambre.h \
+    patient.h \
+    dialog.h \
+    gestion_patient.h
 
 FORMS += \
         mainwindow.ui \
@@ -63,7 +83,11 @@ FORMS += \
     gestion_login2.ui \
     login_ajouter.ui \
     login_modifier.ui \
-    login_historique.ui
+    login_historique.ui \
+    rendez_vous.ui \
+    mainwin.ui \
+    dialog.ui \
+    gestion_patient.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

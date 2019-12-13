@@ -6,6 +6,8 @@
 #include"ui_login_add.h"
 #include "connection_med_om.h"
 #include"arduino.h"
+#include"rendez_vous.h"
+#include "gestion_patient.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -82,6 +84,8 @@ void dashboard::on_btn_gestion_patient_pressed()
 void dashboard::on_btn_gestion_patient_released()
 {
     ui->btn_gestion_patient->setStyleSheet("border-image: url(:/img/dashboard/btn_gestion_patient1.png)3 10 15 10; font: 24pt Bahnschrift; ");
+    gestion_patient gestient_patient;
+    gestient_patient.exec();
 
 }
 
@@ -102,4 +106,16 @@ void dashboard::on_btn_gestion_login_released()
     gestion_login2 gestion_login2;
     gestion_login2.setModal(true);
     gestion_login2.exec();
+}
+
+void dashboard::on_btn_gestion_login_2_released()
+{
+   Rendez_Vous Rendez_Vous;
+
+   Rendez_Vous.exec();
+
+   //r = new Rendez_Vous();
+  // r->show();
+
+
 }

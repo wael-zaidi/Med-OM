@@ -14,6 +14,7 @@
         <file>img/Gestion login/rubbish.png</file>
         <file>img/login/eye.png</file>
         <file>img/Gestion login/refresh.png</file>
+        <file>img/dashboard/menu.png</file>
     </qresource>
     <qresource prefix="/">
         <file>img/login/background.jpg</file>
@@ -33,5 +34,25 @@
         <file>img/Gestion login/icon_login.png</file>
         <file>connection_med_om.cpp</file>
         <file>connection_med_om.h</file>
+        <file>Ressource/Apocalyptica_-_The Unforgiven.mp3</file>
+        <file>Ressource/Apocalyptica_-_The Unforgiven.wav</file>
+        <file>Ressource/Asset 2.png</file>
+        <file>Ressource/Asset 3.png</file>
+        <file>Ressource/Asset 4.png</file>
+        <file>Ressource/background.jpg</file>
+        <file>Ressource/Background_color.png</file>
+        <file>Ressource/blue.jpeg</file>
+        <file>Ressource/button_clicked.png</file>
+        <file>Ressource/button_init.png</file>
+        <file>Ressource/cancel.png</file>
+        <file>Ressource/checked.png</file>
+        <file>Ressource/dashboard.jpg</file>
+        <file>Ressource/icon_add.png</file>
+        <file>Ressource/icon_edit.png</file>
+        <file>Ressource/job.png</file>
+        <file>Ressource/more.png</file>
+        <file>Ressource/pencil.png</file>
+        <file>Ressource/pill.png</file>
+        <file>Ressource/prescription.png</file>
     </qresource>
 </RCC>

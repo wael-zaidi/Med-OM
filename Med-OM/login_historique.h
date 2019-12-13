@@ -1,6 +1,6 @@
 #ifndef LOGIN_HISTORIQUE_H
 #define LOGIN_HISTORIQUE_H
-
+#include "login_ajouter.h"
 #include <QDialog>
 
 namespace Ui {
@@ -12,11 +12,15 @@ class login_historique : public QDialog
     Q_OBJECT
 
 public:
+
+ 
+
     explicit login_historique(QWidget *parent = nullptr);
     ~login_historique();
 
     void afficher_tab();
-
+  //  void set_labels_login();
+   // void qry_historique_login(QString id);
 
 
 private slots:

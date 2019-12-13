@@ -4,6 +4,8 @@
 #include "connection_med_om.h"
 #include"dashboard.h"
 #include"ui_dashboard.h"
+#include"login_historique.h"
+#include"login_historique_class.h"
 #include <QApplication>
 #include <QMessageBox>
 #include<QPixmap>
@@ -21,16 +23,7 @@ Login::Login(QWidget *parent) :
 
 {
     ui->setupUi(this);
-    int ret=A.connect_arduino(); // lancer la connexion à arduino
-    switch(ret){
-    case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
-        break;
-    case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
-       break;
-    case(-1):qDebug() << "arduino is not available";
-    }
-     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
-     //le slot update_label suite à la reception du signal readyRead (reception des données).
+
  /*
     // insere image background
     QPixmap pix(":/img/login/img/login/background.jpg");
@@ -107,39 +100,38 @@ void Login::on_login_released()
 
 
             // ajout de l'action au tab historique login
-                QSqlQuery qry_hist;
+             /*   QSqlQuery qry_hist;
                 QString time = QTime::currentTime().toString();
                 int date_day = QDate::currentDate().day();
                 int date_mounth = QDate::currentDate().month();
                 int date_year = QDate::currentDate().year();
                 QString date = QString::number(date_day) +"/"+ QString::number(date_mounth)+"/"+QString::number(date_year);
-
                 QString action = "login";
+            */
 
-               qry_hist.prepare("insert into LOGIN_HISTORIQUE (LOGIN,DATE_LOGIN,HEURE_LOGIN,ACTION) values ('"+id+"','"+date+"','"+time+"','"+action+"')");
-              if (qry_hist.exec())
-              {
+
+              // qry_hist.prepare("insert into LOGIN_HISTORIQUE (LOGIN,DATE_LOGIN,HEURE_LOGIN,ACTION) values ('"+id+"','"+date+"','"+time+"','"+action+"')");
+
 
                 dashboard dashboard;
                 dashboard.temp_login(ui->text_id->text());
+
+                login_historique_class login_historique_class;
+                login_historique_class.set_labels_login();
+                login_historique_class.qry_historique_login(ui->text_id->text());
+
+
                 ui->text_id->setText("");
                 ui->text_password->setText("");
-                A.write_to_arduino("1");
+              //  A.write_to_arduino("1");
                 dashboard.setModal(true);
                 dashboard.exec();
-                 A.write_to_arduino("0");
-              }
-              else
-          {
-            QMessageBox::critical(this,tr("SAVE"),qry_hist.lastError().text());
-              }
+               //  A.write_to_arduino("0");
+
             }
             if(count<1)
             {
-                 A.write_to_arduino("1");
-                  A.write_to_arduino("0");
-                   A.write_to_arduino("1");
-                    A.write_to_arduino("0");
+
                 QMessageBox::critical(nullptr, QObject::tr("Attention"),
                             QObject::tr("Veuillez verifier votre login et mot de passe.\n"), QMessageBox::Ok);
             }

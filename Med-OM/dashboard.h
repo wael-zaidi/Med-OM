@@ -1,7 +1,7 @@
 #ifndef DASHBOARD_H
 #define DASHBOARD_H
 #include"arduino.h"
-
+#include"rendez_vous.h"
 #include <QDialog>
 
 namespace Ui {
@@ -28,12 +28,15 @@ private slots:
     void on_btn_gestion_login_released();
     void closeEvent(QCloseEvent *event);
 
+    void on_btn_gestion_login_2_released();
+
 private:
     Ui::dashboard *ui;
 
     QByteArray data; // variable contenant les données reçues
 
     Arduino A;
+   // Rendez_Vous *r;
 
 protected:
   //  void closeEvent(QCloseEvent *event);

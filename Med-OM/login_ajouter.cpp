@@ -82,11 +82,6 @@ void login_ajouter::login_qry_ajouter()
 }
 
 
-
-
-
-
-
 void login_ajouter::on_btn_ajouter_pressed()
 {
      ui->btn_ajouter->setStyleSheet("border-image: url(:/img/dashboard/btn_gestion_patient2.png)3 10 15 10; font: 22pt Bahnschrift;");
